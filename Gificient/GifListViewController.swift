@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GifListViewController.swift
 //  Gificient
 //
 //  Created by Radwa Muhammad on 08.09.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GifListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
