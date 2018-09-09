@@ -18,7 +18,7 @@ protocol GifViewModelProtocol {
 
 }
 protocol GifViewModelDelegate {
-    func loadGifsSucceeded(gifs: [Gif])
+    func loadGifsSucceeded()
     func loadGifsFailed()
 }
 
@@ -41,6 +41,9 @@ class GifViewModel: GifViewModelProtocol {
                 return
             }
             self.gifList = gifs
+            DispatchQueue.main.async{
+                self.delegate?.loadGifsSucceeded()
+            }
         }
     }
 

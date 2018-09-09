@@ -12,8 +12,8 @@ class GifListViewController: UIViewController, GifViewModelDelegate{
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel: GifViewModelProtocol?
 
-    func loadGifsSucceeded(gifs: [Gif]) {
-        self.collectionView.reloadData()
+    func loadGifsSucceeded() {
+        self.collectionView?.reloadData()
     }
 
     func loadGifsFailed() {
@@ -25,8 +25,9 @@ class GifListViewController: UIViewController, GifViewModelDelegate{
         viewModel = GifViewModel(service: TrendingGifsService(), delegate: self)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView?.register(GifCellView.self, forCellWithReuseIdentifier: "GifCell")
         self.viewModel?.loadGifs()
     }
 
@@ -37,7 +38,11 @@ class GifListViewController: UIViewController, GifViewModelDelegate{
 
 }
 extension GifListViewController: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: 400)
+    }
 }
 
 extension GifListViewController: UICollectionViewDataSource {
@@ -45,6 +50,10 @@ extension GifListViewController: UICollectionViewDataSource {
                         numberOfItemsInSection section: Int) -> Int {
         guard let count = self.viewModel?.gifCount() else { return 0 }
         return count
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
