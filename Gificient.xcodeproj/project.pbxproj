@@ -19,7 +19,6 @@
 		B23F0EB621440F340002E54D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23F0EB421440F340002E54D /* Main.storyboard */; };
 		B23F0EB821440F350002E54D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23F0EB721440F350002E54D /* Assets.xcassets */; };
 		B23F0EBB21440F350002E54D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23F0EB921440F350002E54D /* LaunchScreen.storyboard */; };
-		B23F0EC621440F350002E54D /* GificientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F0EC521440F350002E54D /* GificientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		B23F0EBA21440F350002E54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23F0EBC21440F350002E54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B23F0EC121440F350002E54D /* GificientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GificientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B23F0EC521440F350002E54D /* GificientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GificientTests.swift; sourceTree = "<group>"; };
 		B23F0EC721440F350002E54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +104,22 @@
 			path = Assests;
 			sourceTree = "<group>";
 		};
+		16737D352145E66000A84B5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16737D2821458B7400A84B5E /* GifViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		16737D362145E68F00A84B5E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16737D2A21458FE900A84B5E /* TrendingGifsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B23F0EA421440F340002E54D = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +146,8 @@
 				16737D322145CC5D00A84B5E /* Assests */,
 				16737D2021452DBB00A84B5E /* model */,
 				16737D2121452DBB00A84B5E /* view */,
-				16737D2821458B7400A84B5E /* GifViewModel.swift */,
-				16737D2A21458FE900A84B5E /* TrendingGifsService.swift */,
+				16737D352145E66000A84B5E /* ViewModel */,
+				16737D362145E68F00A84B5E /* Service */,
 				B23F0EBC21440F350002E54D /* Info.plist */,
 			);
 			path = Gificient;
@@ -142,7 +156,6 @@
 		B23F0EC421440F350002E54D /* GificientTests */ = {
 			isa = PBXGroup;
 			children = (
-				B23F0EC521440F350002E54D /* GificientTests.swift */,
 				B23F0EC721440F350002E54D /* Info.plist */,
 				16737D262145740A00A84B5E /* GifTests.swift */,
 				16737D332145CD0400A84B5E /* TradingGifsServiceTest.swift */,
@@ -284,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16737D272145740A00A84B5E /* GifTests.swift in Sources */,
-				B23F0EC621440F350002E54D /* GificientTests.swift in Sources */,
 				16737D342145CD0400A84B5E /* TradingGifsServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
