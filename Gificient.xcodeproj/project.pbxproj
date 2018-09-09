@@ -10,6 +10,11 @@
 		16737D2321452DBB00A84B5E /* GifListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D2221452DBB00A84B5E /* GifListViewController.swift */; };
 		16737D2521452DF400A84B5E /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D2421452DF400A84B5E /* Gif.swift */; };
 		16737D272145740A00A84B5E /* GifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D262145740A00A84B5E /* GifTests.swift */; };
+		16737D2921458B7400A84B5E /* GifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D2821458B7400A84B5E /* GifViewModel.swift */; };
+		16737D2B21458FE900A84B5E /* TrendingGifsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D2A21458FE900A84B5E /* TrendingGifsService.swift */; };
+		16737D2D2145C48300A84B5E /* GifCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D2C2145C48300A84B5E /* GifCellView.swift */; };
+		16737D302145C7F000A84B5E /* SwiftyGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16737D2F2145C7F000A84B5E /* SwiftyGif.framework */; };
+		16737D342145CD0400A84B5E /* TradingGifsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16737D332145CD0400A84B5E /* TradingGifsServiceTest.swift */; };
 		B23F0EB121440F340002E54D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F0EB021440F340002E54D /* AppDelegate.swift */; };
 		B23F0EB621440F340002E54D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23F0EB421440F340002E54D /* Main.storyboard */; };
 		B23F0EB821440F350002E54D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23F0EB721440F350002E54D /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		16737D2221452DBB00A84B5E /* GifListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifListViewController.swift; sourceTree = "<group>"; };
 		16737D2421452DF400A84B5E /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		16737D262145740A00A84B5E /* GifTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifTests.swift; sourceTree = "<group>"; };
+		16737D2821458B7400A84B5E /* GifViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewModel.swift; sourceTree = "<group>"; };
+		16737D2A21458FE900A84B5E /* TrendingGifsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGifsService.swift; sourceTree = "<group>"; };
+		16737D2C2145C48300A84B5E /* GifCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCellView.swift; sourceTree = "<group>"; };
+		16737D2F2145C7F000A84B5E /* SwiftyGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyGif.framework; path = Carthage/Build/iOS/SwiftyGif.framework; sourceTree = "<group>"; };
+		16737D332145CD0400A84B5E /* TradingGifsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingGifsServiceTest.swift; sourceTree = "<group>"; };
 		B23F0EAD21440F340002E54D /* Gificient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gificient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23F0EB021440F340002E54D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23F0EB521440F340002E54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16737D302145C7F000A84B5E /* SwiftyGif.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +83,27 @@
 			isa = PBXGroup;
 			children = (
 				16737D2221452DBB00A84B5E /* GifListViewController.swift */,
+				16737D2C2145C48300A84B5E /* GifCellView.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		16737D2E2145C7F000A84B5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16737D2F2145C7F000A84B5E /* SwiftyGif.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16737D322145CC5D00A84B5E /* Assests */ = {
+			isa = PBXGroup;
+			children = (
+				B23F0EB421440F340002E54D /* Main.storyboard */,
+				B23F0EB721440F350002E54D /* Assets.xcassets */,
+				B23F0EB921440F350002E54D /* LaunchScreen.storyboard */,
+			);
+			path = Assests;
 			sourceTree = "<group>";
 		};
 		B23F0EA421440F340002E54D = {
@@ -82,6 +112,7 @@
 				B23F0EAF21440F340002E54D /* Gificient */,
 				B23F0EC421440F350002E54D /* GificientTests */,
 				B23F0EAE21440F340002E54D /* Products */,
+				16737D2E2145C7F000A84B5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +128,12 @@
 		B23F0EAF21440F340002E54D /* Gificient */ = {
 			isa = PBXGroup;
 			children = (
+				B23F0EB021440F340002E54D /* AppDelegate.swift */,
+				16737D322145CC5D00A84B5E /* Assests */,
 				16737D2021452DBB00A84B5E /* model */,
 				16737D2121452DBB00A84B5E /* view */,
-				B23F0EB021440F340002E54D /* AppDelegate.swift */,
-				B23F0EB421440F340002E54D /* Main.storyboard */,
-				B23F0EB721440F350002E54D /* Assets.xcassets */,
-				B23F0EB921440F350002E54D /* LaunchScreen.storyboard */,
+				16737D2821458B7400A84B5E /* GifViewModel.swift */,
+				16737D2A21458FE900A84B5E /* TrendingGifsService.swift */,
 				B23F0EBC21440F350002E54D /* Info.plist */,
 			);
 			path = Gificient;
@@ -114,6 +145,7 @@
 				B23F0EC521440F350002E54D /* GificientTests.swift */,
 				B23F0EC721440F350002E54D /* Info.plist */,
 				16737D262145740A00A84B5E /* GifTests.swift */,
+				16737D332145CD0400A84B5E /* TradingGifsServiceTest.swift */,
 			);
 			path = GificientTests;
 			sourceTree = "<group>";
@@ -128,6 +160,7 @@
 				B23F0EA921440F340002E54D /* Sources */,
 				B23F0EAA21440F340002E54D /* Frameworks */,
 				B23F0EAB21440F340002E54D /* Resources */,
+				16737D312145C8EF00A84B5E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,6 +247,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16737D312145C8EF00A84B5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyGif.framework",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/SwiftyGif.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B23F0EA921440F340002E54D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +273,9 @@
 				B23F0EB121440F340002E54D /* AppDelegate.swift in Sources */,
 				16737D2321452DBB00A84B5E /* GifListViewController.swift in Sources */,
 				16737D2521452DF400A84B5E /* Gif.swift in Sources */,
+				16737D2D2145C48300A84B5E /* GifCellView.swift in Sources */,
+				16737D2B21458FE900A84B5E /* TrendingGifsService.swift in Sources */,
+				16737D2921458B7400A84B5E /* GifViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +285,7 @@
 			files = (
 				16737D272145740A00A84B5E /* GifTests.swift in Sources */,
 				B23F0EC621440F350002E54D /* GificientTests.swift in Sources */,
+				16737D342145CD0400A84B5E /* TradingGifsServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +438,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Gificient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,6 +459,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Gificient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
