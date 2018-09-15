@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GifListViewController") as! GifListViewController
+        vc.viewModel = GifViewModel(service: TrendingGifsService(), delegate: vc)
+        self.window?.rootViewController = UINavigationController(rootViewController: vc)
+        self.window?.makeKeyAndVisible()
         return true
     }
 
@@ -43,4 +49,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

@@ -97,9 +97,7 @@
 		16737D322145CC5D00A84B5E /* Assests */ = {
 			isa = PBXGroup;
 			children = (
-				B23F0EB421440F340002E54D /* Main.storyboard */,
 				B23F0EB721440F350002E54D /* Assets.xcassets */,
-				B23F0EB921440F350002E54D /* LaunchScreen.storyboard */,
 			);
 			path = Assests;
 			sourceTree = "<group>";
@@ -143,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				B23F0EB021440F340002E54D /* AppDelegate.swift */,
+				B23F0EB421440F340002E54D /* Main.storyboard */,
+				B23F0EB921440F350002E54D /* LaunchScreen.storyboard */,
 				16737D322145CC5D00A84B5E /* Assests */,
 				16737D2021452DBB00A84B5E /* model */,
 				16737D2121452DBB00A84B5E /* view */,
@@ -462,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rme.Gificient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -483,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rme.Gificient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

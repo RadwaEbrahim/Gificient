@@ -20,14 +20,15 @@ class GifListViewController: UIViewController, GifViewModelDelegate{
         //TODO: show alert view and hid the collectionview
     }
 
-
-    override func loadView() {
-        viewModel = GifViewModel(service: TrendingGifsService(), delegate: self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Trending"
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.collectionView?.register(GifCellView.self, forCellWithReuseIdentifier: "GifCell")
         self.viewModel?.loadGifs()
     }
 
@@ -53,14 +54,20 @@ extension GifListViewController: UICollectionViewDataSource {
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        guard let _ = self.viewModel?.gifCount() else { return 0 }
         return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GifCell", for: indexPath as IndexPath) as! GifCellView
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "GifCell", for: indexPath as IndexPath
+            ) as! GifCellView
 
-        let gif = self.viewModel?.gifAtIndex(index: indexPath.row)
-        cell.configCell(with: gif!)
+        guard let gif = self.viewModel?.gifAtIndex(index: indexPath.row) else {
+            //FIXME: this should fail here as if viewmodel is nil at this point then something went so wrong
+            return UICollectionViewCell()
+        }
+        cell.configCell(with: gif)
         return cell
     }
 }
